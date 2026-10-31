@@ -1,0 +1,181 @@
+.hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: #fff;
+}
+.content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1440px;
+  margin-inline: auto;
+  padding: 2.5rem 1.25rem 2rem;
+}
+.eyebrow {
+  margin-bottom: 1.25rem;
+  color: #4f685b;
+  font-size: .68rem;
+  font-weight: 600;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+.heading {
+  max-width: 17ch;
+  color: var(--brand-deep-forest-green);
+  font-size: clamp(2rem, 6.8vw, 3.25rem);
+  font-weight: 600;
+  line-height: 1.16;
+  letter-spacing: -.045em;
+  text-wrap: balance;
+}
+.description {
+  max-width: 30rem;
+  margin-top: 1.25rem;
+  color: #536359;
+  font-size: 1rem;
+  line-height: 1.85;
+}
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .75rem;
+  margin-top: 1.75rem;
+}
+.primaryAction, .secondaryAction {
+  display: inline-flex;
+  min-height: 3.25rem;
+  align-items: center;
+  justify-content: center;
+  gap: .75rem;
+  border: 1px solid transparent;
+  border-radius: .375rem;
+  padding: .875rem 1.125rem;
+  font-size: .875rem;
+  font-weight: 600;
+  transition: background-color 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+.primaryAction {
+  border-color: var(--brand-deep-forest-green);
+  background: var(--brand-deep-forest-green);
+  color: #fff;
+  box-shadow: 0 5px 18px #1f4d3a14;
+}
+.primaryAction:hover {
+  background: #173b2c;
+  box-shadow: 0 7px 22px #1f4d3a24;
+}
+.primaryAction svg {
+  width: 1.125rem;
+  height: 1.125rem;
+  stroke: currentColor;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.secondaryAction {
+  border-color: #1f4d3a45;
+  background: #ffffffd9;
+  color: var(--brand-deep-forest-green);
+}
+.secondaryAction:hover {
+  border-color: var(--brand-deep-forest-green);
+  background: var(--brand-warm-ivory);
+}
+.primaryAction:focus-visible, .secondaryAction:focus-visible {
+  outline: 2px solid var(--brand-harvest-gold);
+  outline-offset: 4px;
+}
+.supportingLine {
+  max-width: 28rem;
+  margin-top: 1.5rem;
+  color: #596a60;
+  font-size: .75rem;
+  line-height: 1.8;
+}
+.artwork {
+  position: relative;
+  height: clamp(20rem, 102vw, 23rem);
+  background: #e7ddcf;
+}
+.photograph { object-fit: cover; object-position: 84% center; }
+.wallCopy {
+  position: absolute;
+  inset: 1.75rem .75rem 1.75rem auto;
+  display: flex;
+  width: 24%;
+  max-width: 12rem;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.quote {
+  color: #59574f;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.5rem, 6vw, 2.25rem);
+  font-weight: 400;
+  line-height: 1.16;
+  letter-spacing: -.035em;
+}
+.quote span { display: block; }
+.goldRule {
+  display: block;
+  width: 2.25rem;
+  height: 2px;
+  margin-top: .8rem;
+  background: #b58b35;
+}
+.handwritten {
+  position: relative;
+  margin-top: auto;
+  color: #4d685b;
+  font-family: var(--font-caveat), cursive;
+  font-size: clamp(1.5rem, 7.5vw, 1.8rem);
+  font-weight: 500;
+  line-height: .95;
+  white-space: nowrap;
+  transform: rotate(-6deg);
+}
+.handwritten::after {
+  position: absolute;
+  right: 0;
+  bottom: -.55rem;
+  left: .5rem;
+  height: .25rem;
+  border-top: 2px solid #b58b35;
+  border-radius: 50%;
+  content: "";
+  transform: rotate(-5deg);
+}
+@media (min-width: 640px) and (max-width: 1279px) {
+  .content { padding: 3rem 2rem 2.5rem; }
+  .heading { max-width: 23ch; font-size: 2.9rem; }
+  .artwork { height: 27rem; }
+  .photograph { object-position: 100% center; }
+  .wallCopy { right: 4%; width: 16%; }
+  .quote { font-size: 2.3rem; }
+  .handwritten { font-size: 2.2rem; }
+}
+@media (min-width: 1280px) {
+  .hero { min-height: 37.5rem; display: grid; align-items: center; }
+  .content { padding: 3.5rem 2.5rem; }
+  .content > * { max-width: 43%; }
+  .eyebrow { font-size: .7rem; }
+  .heading { font-size: clamp(2.4rem, 3.15vw, 3.25rem); line-height: 1.14; }
+  .description { max-width: 37%; font-size: 1.05rem; line-height: 1.8; }
+  .actions { max-width: 48%; gap: .75rem; }
+  .supportingLine { max-width: 38%; }
+  .artwork { position: absolute; z-index: -1; inset: 0; height: auto; }
+  .photograph { object-position: center; }
+  .wallCopy { top: 3.4rem; right: 2.7%; bottom: 3rem; width: 13%; }
+  .quote { font-size: clamp(1.75rem, 2.35vw, 2.75rem); }
+  .goldRule { margin-top: 1rem; width: 2.5rem; }
+  .handwritten { margin-left: .75rem; font-size: clamp(2rem, 2.7vw, 3rem); }
+}
+@media (min-width: 1440px) {
+  .hero { min-height: 39rem; }
+  .content { padding-inline: 4rem; }
+  .wallCopy { right: max(3%, calc((100vw - 1440px) / 2 + 2rem)); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .primaryAction, .secondaryAction { transition: none; }
+}
