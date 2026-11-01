@@ -20,7 +20,32 @@ Updated website for GERIMED CLINICS.
 
 The clinic-approved doctor's name and qualifications were not present in the supplied project. Add them in `data/doctor.ts` when available. No identity, experience or qualification has been invented.
 
-## Getting Started
+## Free hosting: Cloudflare Pages
+
+This project exports static HTML, CSS and JavaScript. The appointment form
+prepares a WhatsApp message in the visitor's browser; it does not store bookings
+or confirm appointment availability.
+
+- Run `npm ci`, then `npm run build`. The deployable website is in `out/`.
+- In Cloudflare, choose Workers & Pages, create a Pages project, and use direct
+  upload to upload the contents of `out/` (or a ZIP containing those contents).
+- Use the supplied `pages.dev` address to avoid purchasing a domain.
+- For automatic GitHub deployments, create a Git-integrated Pages project instead:
+  use build command `npm run build` and output directory `out`. The repository
+  root is the application root. Use Node.js 22.
+- Build-time internet access is required to download the Google Fonts. Fonts are
+  then included in the exported site. Images are served as their original files
+  because there is no image optimization server.
+- After exporting, `npm start` is not the preview command; serve `out/` using a
+  static web server instead. Local development still uses `npm run dev`.
+
+Static hosting supports the current pages, navigation, and WhatsApp form.
+Patient accounts, saved appointments, automatic email/SMS, payments, and a live
+booking calendar would require additional services and separate configuration.
+
+Hosting limits: https://developers.cloudflare.com/pages/platform/limits/
+
+## Local development
 
 Extract this ZIP into a new folder and open that folder in your editor. Keep your original project as a backup.
 
