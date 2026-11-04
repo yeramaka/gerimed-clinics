@@ -8,7 +8,8 @@ export function DoctorSection() {
   return (
     <section id="doctor" className="border-t border-brand-sage/25 bg-white" aria-labelledby="doctor-heading">
       <Container className="grid items-center gap-8 py-14 sm:py-16 lg:grid-cols-[minmax(0,.85fr)_minmax(0,1fr)] lg:gap-16 lg:py-20">
-        <div className="relative mx-auto aspect-[5/4] w-full max-w-xl overflow-hidden rounded-lg bg-brand-ivory lg:aspect-square">
+        <figure className="mx-auto w-full max-w-xl">
+          <div className="relative aspect-[5/4] overflow-hidden rounded-lg bg-brand-ivory lg:aspect-square">
           <Image
             src={doctorProfile.portrait}
             alt="Gerimed Clinics doctor seated at her consultation desk"
@@ -16,13 +17,17 @@ export function DoctorSection() {
             sizes="(min-width: 1024px) 520px, (min-width: 640px) 560px, 100vw"
             className="object-cover object-[50%_65%]"
           />
-        </div>
+          </div>
+          <figcaption className="doctor-caption mt-5 border-l-2 border-brand-gold pl-4">
+            <p className="doctor-caption-name">{doctorProfile.name}</p>
+            <p className="mt-2 text-sm font-medium tracking-wide text-brand-forest/70">{doctorProfile.qualifications}</p>
+          </figcaption>
+        </figure>
         <div className="max-w-xl">
           <p className="mb-4 text-xs font-semibold uppercase tracking-[.18em] text-brand-forest/65">The person behind your care</p>
           <h2 id="doctor-heading" className="text-3xl font-semibold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
-            {doctorProfile.name || "Care that starts with listening."}
+            Care that starts with listening.
           </h2>
-          {doctorProfile.qualifications ? <p className="mt-4 font-medium text-brand-forest/70">{doctorProfile.qualifications}</p> : null}
           <p className="mt-5 text-base leading-8 text-brand-forest/75 sm:text-lg">
             A consultation is a chance to discuss what matters to you. At Gerimed
             Clinics, our approach brings together careful evaluation, clear

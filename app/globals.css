@@ -53,6 +53,17 @@ body {
   color: var(--foreground);
 }
 
+.doctor-caption {
+  container-type: inline-size;
+}
+
+.doctor-caption-name {
+  font-size: clamp(.8125rem, 5.4cqi, 1.5rem);
+  font-weight: 600;
+  line-height: 1.4;
+  white-space: nowrap;
+}
+
 button,
 a {
   -webkit-tap-highlight-color: transparent;

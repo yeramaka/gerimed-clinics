@@ -25,7 +25,7 @@ export default function DoctorPage() {
             <span aria-hidden="true">←</span> Back to Gerimed Clinics
           </Link>
           <section id="doctor" aria-labelledby="profile-heading" className="mt-6 grid items-start gap-8 pb-10 lg:grid-cols-[minmax(0,.82fr)_minmax(0,1fr)] lg:gap-16 lg:pb-16">
-            <div className="mx-auto w-full max-w-[32rem] overflow-hidden rounded-lg bg-white shadow-[0_16px_48px_#1f4d3a0d]">
+            <figure className="mx-auto w-full max-w-[32rem] overflow-hidden rounded-lg bg-white shadow-[0_16px_48px_#1f4d3a0d]">
               <Image
                 src={doctorProfile.portrait}
                 alt="Original portrait of the Gerimed Clinics doctor at her consultation desk"
@@ -34,11 +34,14 @@ export default function DoctorPage() {
                 unoptimized preload
                 className="h-auto w-full"
               />
-            </div>
+              <figcaption className="doctor-caption border-t border-brand-sage/25 px-6 py-5 sm:px-8">
+                <p className="doctor-caption-name">{doctorProfile.name}</p>
+                <p className="mt-2 text-sm font-medium tracking-wide text-brand-forest/70">{doctorProfile.qualifications}</p>
+              </figcaption>
+            </figure>
             <div className="max-w-xl lg:pt-8">
               <p className="text-xs font-semibold uppercase tracking-[.18em] text-brand-forest/65">Gerimed Clinics</p>
-              <h1 id="profile-heading" className="mt-4 text-4xl font-semibold leading-tight tracking-tight sm:text-5xl">{doctorProfile.name || "Meet your doctor."}</h1>
-              {doctorProfile.qualifications ? <p className="mt-4 text-lg font-medium text-brand-forest/70">{doctorProfile.qualifications}</p> : null}
+              <h1 id="profile-heading" className="mt-4 text-4xl font-semibold leading-tight tracking-tight sm:text-5xl">Meet your doctor.</h1>
               <p className="mt-6 font-[Georgia,serif] text-3xl leading-snug text-brand-forest/85">Personal care.<br />A clearer path forward.</p>
               <p className="mt-6 text-base leading-8 text-brand-forest/75 sm:text-lg">Your health needs change over time. Our approach at Gerimed Clinics is centred on listening, understanding your day-to-day needs and helping you make sense of your care plan.</p>
               <p className="mt-4 text-base leading-8 text-brand-forest/75 sm:text-lg">Whether you are arranging a consultation for yourself or a family member, the clinic team can help you choose a suitable care area and appointment window.</p>

@@ -146,6 +146,25 @@
   content: "";
   transform: rotate(-5deg);
 }
+.doctorIdentity {
+  padding: 1.25rem;
+  border-top: 2px solid var(--brand-harvest-gold);
+  background: var(--brand-warm-ivory);
+  color: var(--brand-deep-forest-green);
+}
+.doctorName {
+  font-size: clamp(.875rem, 3.8vw, 1rem);
+  font-weight: 600;
+  line-height: 1.4;
+  white-space: nowrap;
+}
+.doctorQualifications {
+  margin-top: .375rem;
+  color: #4f685b;
+  font-size: .875rem;
+  font-weight: 500;
+  letter-spacing: .035em;
+}
 @media (min-width: 640px) and (max-width: 1279px) {
   .content { padding: 3rem 2rem 2.5rem; }
   .heading { max-width: 23ch; font-size: 2.9rem; }
@@ -154,6 +173,7 @@
   .wallCopy { right: 4%; width: 16%; }
   .quote { font-size: 2.3rem; }
   .handwritten { font-size: 2.2rem; }
+  .doctorIdentity { padding: 1.25rem 2rem; }
 }
 @media (min-width: 1280px) {
   .hero { min-height: 37.5rem; display: grid; align-items: center; }
@@ -170,6 +190,17 @@
   .quote { font-size: clamp(1.75rem, 2.35vw, 2.75rem); }
   .goldRule { margin-top: 1rem; width: 2.5rem; }
   .handwritten { margin-left: .75rem; font-size: clamp(2rem, 2.7vw, 3rem); }
+  .doctorIdentity {
+    position: absolute;
+    top: 48%;
+    right: 2.7%;
+    width: max-content;
+    max-width: none;
+    padding: .875rem 0 0;
+    background: transparent;
+  }
+  .doctorName { font-size: clamp(.75rem, 1.05vw, .9375rem); }
+  .doctorQualifications { font-size: .8125rem; }
 }
 @media (min-width: 1440px) {
   .hero { min-height: 39rem; }

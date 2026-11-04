@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import { doctorProfile } from "@/data/doctor";
+
 import styles from "./HeroSection.module.css";
 
 export function HeroSection() {
@@ -48,6 +50,10 @@ export function HeroSection() {
           <span className={styles.goldRule} aria-hidden="true" />
           <p className={styles.handwritten}>Care<br />for what<br />matters</p>
         </div>
+      </div>
+      <div className={styles.doctorIdentity}>
+        <p className={styles.doctorName}>{doctorProfile.name}</p>
+        <p className={styles.doctorQualifications}>{doctorProfile.qualifications}</p>
       </div>
     </section>
   );
