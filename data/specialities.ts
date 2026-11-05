@@ -5,8 +5,6 @@ export type Speciality = {
   introduction: string;
   points: string[];
   closingLine: string;
-  linkLabel: string;
-  href: string;
 };
 
 export const specialities: Speciality[] = [
@@ -24,8 +22,6 @@ export const specialities: Speciality[] = [
     ],
     closingLine:
       "A practical starting point for new symptoms, regular follow-ups and continuing adult healthcare.",
-    linkLabel: "Learn about General Medicine consultations",
-    href: "#appointment",
   },
   {
     id: "geriatric-care",
@@ -41,8 +37,6 @@ export const specialities: Speciality[] = [
     ],
     closingLine:
       "Care that considers independence, comfort, daily routines and quality of life alongside medical needs.",
-    linkLabel: "Learn about Geriatric Care consultations",
-    href: "#appointment",
   },
   {
     id: "lifestyle-preventive-care",
@@ -58,7 +52,50 @@ export const specialities: Speciality[] = [
     ],
     closingLine:
       "Small, practical improvements shaped around the patient's health, routine and personal circumstances.",
-    linkLabel: "Learn about Lifestyle and Preventive Care consultations",
-    href: "#appointment",
+  },
+  {
+    id: "adult-vaccinations",
+    number: "04",
+    title: "Adult Vaccinations",
+    introduction:
+      "Personalised vaccination guidance to support prevention throughout adult life.",
+    points: [
+      "Review of vaccination history",
+      "Age-appropriate vaccine recommendations",
+      "Dose and booster guidance",
+      "Discussion of benefits and precautions",
+    ],
+    closingLine:
+      "A practical approach to prevention, guided by your age, medical history and individual health needs.",
+  },
+  {
+    id: "fever-clinic",
+    number: "05",
+    title: "Fever Clinic",
+    introduction:
+      "Focused assessment and care for adults with fever and accompanying symptoms.",
+    points: [
+      "Assessment of fever and related symptoms",
+      "Investigations when clinically appropriate",
+      "Individualised treatment and recovery advice",
+      "Follow-up and referral when needed",
+    ],
+    closingLine:
+      "Care that helps you understand your symptoms, supports recovery and guides appropriate next steps.",
+  },
+  {
+    id: "pharmacy-diagnostics",
+    number: "06",
+    title: "Pharmacy & Diagnostics",
+    introduction:
+      "Access to prescribed medicines and recommended tests to support your care.",
+    points: [
+      "Access to prescribed medicines",
+      "Doctor-recommended diagnostic tests",
+      "Review and explanation of test results",
+      "Support for ongoing health monitoring",
+    ],
+    closingLine:
+      "Practical support that connects your consultation with medicines, investigations and follow-up care.",
   },
 ];

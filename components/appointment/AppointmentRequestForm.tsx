@@ -183,7 +183,7 @@ export function AppointmentRequestForm() {
 
   const summaryItems = [
     {
-      label: "Consultation",
+      label: "Care area",
       value: consultationLabel,
     },
     {
@@ -346,7 +346,7 @@ export function AppointmentRequestForm() {
               controlsId="appointment-step-preferences"
               isOpen={activeStep === 1}
               number="1"
-              title="Consultation, date and time"
+              title="Care area, date and time"
               summary={stepOneSummary}
               onClick={() => setActiveStep(1)}
             />
@@ -358,7 +358,7 @@ export function AppointmentRequestForm() {
             >
               <div>
                 <label htmlFor="consultation-type" className={labelClass}>
-                  Consultation type
+                  Care area
                 </label>
                 <select
                   ref={consultationRef}

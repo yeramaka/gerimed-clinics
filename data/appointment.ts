@@ -2,6 +2,9 @@ export type ConsultationTypeId =
   | "general-medicine"
   | "geriatric-care"
   | "lifestyle-preventive-care"
+  | "adult-vaccinations"
+  | "fever-clinic"
+  | "pharmacy-diagnostics"
   | "follow-up-consultation"
   | "not-sure";
 
@@ -28,6 +31,8 @@ export const clinicContact = {
   phoneNumber: "+91 99852 41122",
   telHref: "tel:+919985241122",
   whatsappBaseLink: "https://wa.me/919985241122",
+  instagramUrl: "https://www.instagram.com/gerimed.clinics",
+  facebookUrl: "https://www.facebook.com/profile.php?id=61595292773809",
 };
 
 export const consultationTypes: ConsultationType[] = [
@@ -48,6 +53,24 @@ export const consultationTypes: ConsultationType[] = [
     label: "Lifestyle & Preventive Care",
     description:
       "Practical guidance for long-term health and healthier routines.",
+  },
+  {
+    id: "adult-vaccinations",
+    label: "Adult Vaccinations",
+    description:
+      "Vaccination guidance based on your age, history and health needs.",
+  },
+  {
+    id: "fever-clinic",
+    label: "Fever Clinic",
+    description:
+      "Assessment and care for fever and associated symptoms.",
+  },
+  {
+    id: "pharmacy-diagnostics",
+    label: "Pharmacy & Diagnostics",
+    description:
+      "Support with prescribed medicines and doctor-recommended tests.",
   },
   {
     id: "follow-up-consultation",

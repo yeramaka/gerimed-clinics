@@ -1,6 +1,7 @@
-import type {
-  ConsultationTypeId,
-  PreferredTimeWindowId,
+import {
+  consultationTypes,
+  type ConsultationTypeId,
+  type PreferredTimeWindowId,
 } from "@/data/appointment";
 
 export type AppointmentFormValues = {
@@ -160,8 +161,8 @@ export function validateAppointmentRequest(
   const trimmedName = values.fullName.trim();
   const trimmedEmail = values.email.trim();
 
-  if (!values.consultationTypeId) {
-    errors.consultationTypeId = "Select a consultation type.";
+  if (!consultationTypes.some((item) => item.id === values.consultationTypeId)) {
+    errors.consultationTypeId = "Select a care area.";
   }
 
   if (!values.preferredDate) {
@@ -215,7 +216,7 @@ export function buildWhatsAppMessage(input: WhatsAppMessageInput) {
     `Name: ${input.fullName.trim()}`,
     `Mobile: ${input.mobileNumber}`,
     `Email: ${input.email.trim() || "Not provided"}`,
-    `Consultation: ${input.consultationLabel}`,
+    `Care area: ${input.consultationLabel}`,
     `Preferred date: ${input.preferredDateLabel}`,
     `Preferred time: ${input.preferredTimeLabel}`,
     "",

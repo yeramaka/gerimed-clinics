@@ -16,7 +16,7 @@ export function AppointmentSection() {
             aria-hidden="true"
           />
           <p className="mb-4 text-sm font-semibold uppercase tracking-[0.16em] text-brand-forest/65">
-            Book a Consultation
+            Request care
           </p>
           <h2
             id="appointment-heading"
@@ -26,7 +26,7 @@ export function AppointmentSection() {
           </h2>
           </div>
           <p className="mt-4 max-w-2xl text-base leading-7 text-brand-forest/75 sm:text-lg sm:leading-8 lg:mt-0 lg:max-w-none">
-            Select your preferred consultation, date and time. The clinic team
+            Select your care area, preferred date and time. The clinic team
             will contact you to confirm availability.
           </p>
         </div>

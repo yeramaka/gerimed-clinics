@@ -4,12 +4,12 @@ const questions = [
   {
     question: "How do I request an appointment?",
     answer:
-      "Choose your consultation, preferred date and time in the appointment form. Review your details, then select Send Request on WhatsApp and send the prepared message there. The clinic team will confirm availability; submitting a request does not confirm an appointment.",
+      "Choose your care area, preferred date and time in the appointment form. Review your details, then select Send Request on WhatsApp and send the prepared message there. The clinic team will confirm availability; submitting a request does not confirm an appointment.",
   },
   {
     question: "Which care areas does Gerimed Clinics offer?",
     answer:
-      "The clinic focuses on general medicine for adults, geriatric care for older adults, and lifestyle and preventive care. If you are unsure which consultation to choose, select Not Sure in the form or call the clinic for guidance.",
+      "Gerimed Clinics offers General Medicine, Geriatric Care, Lifestyle & Preventive Care, Adult Vaccinations, Fever Clinic, and Pharmacy & Diagnostics. If you are unsure which care area to choose, select Not Sure in the form or call the clinic for guidance.",
   },
   {
     question: "What should I bring to my consultation?",
